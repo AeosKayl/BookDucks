@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookDucks</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cardo:ital@0;1&family=Cinzel&family=Jost:wght@300;600&family=Merienda:wght@400;700&family=Poiret+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css"> 
+</head>
+<body>
+  <header>
+    <div class="header-wrap">
+      <h1 class="header">BookDucks</h1>
+      <h2>Duck and borrow a book</h2>
+    </div>
+    <div class="logo-cont">
+      <img src="images/cute-duck-logo.jpg" alt="logo">
+    </div>
+    <div class="login-btn-wrap">
+      <p class="logged-user">You are not logged in</p>
+      <button class="login-btn">Log in/register</button>
+      <button class="show-main hidden">Back to Main</button>
+      <button class="show-profile hidden">Back to Profile</button>
+      <button class="logout-btn hidden" onclick="logout()">Log out</button>
+    </div>
+  </header>
+  <main>
+    <div class="content-wrapper">
+      <section class="login-section hidden">
+        <div class="login-page">
+          <form class="login-form">
+            <label for="username"> Username</label>
+            <input type="text" class="login username-log" name="username" id="username" placeholder="John@doe.com" required>
+            <label for="password">Password</label>
+            <input type="password" class="login password-log" minlength="8" name="password" id="password" placeholder="Johndoe123" required>
+            <button type="submit" class="login-form-btn">Login</button>
+            <p class="or">or</p>
+            <button class="registration-btn">Register Now</button>
+          </form>
+        </div>
+      </section>
+      <section class="registration-section hidden">
+        <div class="registration-page">
+          <form class="registration-form">
+            <label for="reg-username">Your username</label>
+            <input type="text" class="registration username-input" name="reg-username" id="reg-username" placeholder="Username" required>
+            <label for="reg-email">Your email</label>
+            <input type="email" class="registration email-input" name="reg-email" id="reg-email" placeholder="E-mail address" required>
+            <label for="reg-pass">Choose a password</label>
+            <input type="password" class="registration password-input" minlength="8" name="reg-pass" id="reg-pass" placeholder="Password" required>
+            <button type="submit" class="registration-form-btn">Register</button>
+          </form>
+        </div>
+      </section>
+      <section class="my-profile hidden">
+        <h2 class="heading">My profile</h2>
+        <div class="profile-page">
+          <h2 class="member-name"></h2>
+          <p class="member-id"></p>
+          <p class="membership"></p>
+          <p class="member-email"></p>
+        </div>
+        <div class="profile-books">
+          <h3>My current books</h3>
+          <div class="pro-booklist">
+
+          </div>
+        </div>
+        <button class="add-new-btn">Add a new book</button>
+      </section>
+      <section class="add-books hidden">
+        <div class="add-book-wrap">
+          <h3>Add a new book</h3>
+          <form action="" class="add-book-form">
+            <label for="book-title">Book title</label>
+            <input type="text" class="title" name="book-title" id="book-title" placeholder="The Witcher" required>
+            <div class="radio">
+              <div class="btn-wrap">
+                <label for="physical-type">Physical book</label>
+                <input type="radio" name="book-type" id="physical-type" value="text" checked>
+              </div>
+              <div class="btn-wrap">
+                <label for="audio-type">Audio book</label>
+                <input type="radio" name="book-type" id="audio-type" value="audio">
+              </div>
+            </div>
+            <label for="author-name">Author</label>
+            <input type="text" class="author-name" id="author-name" placeholder="Andrzej Sapkowski" required>
+            <div class="genre-boxes">
+              
+            </div>
+            <div class="date-length">
+              <label for="release-date">Date of release</label>
+              <input type="number" class="release-date" id="release-date" placeholder="Date of release" required>
+              <label for="book-length">Length of book</label>
+              <input type="number" class="pages-minutes" id="book-length" placeholder="Pages or minutes" required>
+            </div>  
+            <div class="star-ratings">
+              <label for="star-select">Rate this book</label>
+              <select name="stars" class="rating-choices" id="star-select" required>
+                <option value="" selected disabled hidden>-- Star rating --</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+            <div class="cover-img-upload">
+                <label for="cover-upload">Upload a cover image:</label>
+                <input type="file" class="cover-input" name="cover-upload" id="cover-upload" required>    
+            </div>   
+            <button type="submit" class="add-book-btn">Add this book</button>   
+          </form>
+        </div>
+      </section>
+      <section class="welcome-section">
+        <h2>Welcome to BookDucks</h2>
+        <div class="intro">
+          <p>We at BookDucks are the hunters for once...</p>
+          <p>And we hunt for books that wish to be borrowed</p>
+          <p>Join us and let us grow our book collection!</p>
+        </div>
+      </section>
+      <section class="book-library">
+        <h2>Books ready to be borrowed</h2>
+        <div class="book-gallery">
+
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-info">
+      <p>BookDucks</p>
+      <p>Beyond the swan lake</p>
+      <p>Duckdon, United Duck Kingdom</p>
+    </div>
+  </footer>
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

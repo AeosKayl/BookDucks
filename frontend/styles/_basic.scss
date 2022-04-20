@@ -1,0 +1,311 @@
+.hidden{
+  display: none;
+}
+
+
+body{
+
+  header{
+    width:100%;
+    background-color: $red-brownish;
+    color: $light-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    button{
+      @include simple-btn;
+      @include merienda-f;
+      margin: 0.5em;
+      cursor: pointer;
+    }
+
+    .header-wrap{
+      @include flexCenter(column, flex-start, flex-start);
+      margin-left: 20px;
+      h1,h2{
+        @include merienda-f;
+      }
+    }
+
+    .logo-cont{
+      align-self: center;
+      max-width: 300px;
+      max-height: 300px;
+      display: flex;
+      img{
+        width: 100px;
+        height: 100px;
+        align-self: flex-end;
+        border: 2px solid gold;
+        border-radius: 50px;
+        object-fit:cover;
+      }
+
+    }
+    .login-btn-wrap{
+      @include flexCenter(column, center, center);
+
+      .logged-user{
+        padding: 10px;
+        font-size: 1rem;  
+        @include merienda-f;      
+
+      }
+      .highlight{
+        font-size: 1.5rem;
+        margin-right: 0.5em;
+        color:$hover-color;
+        text-decoration: underline;
+        font-weight: bold;
+        
+      }
+
+      .login-btn{
+        padding: 8px;
+        margin-right: 8px;
+        margin:1em;
+        font-size: 1rem;
+        &:active{
+            background: hsl(58, 97%, 59%);
+          }  
+      }
+    }
+    
+  }
+
+  main{
+
+    //* login section styles
+    .login-section{
+      @include flexCenter(column, center, center);
+      @include merienda-f;
+      margin: 3em 0em;
+      .login-page{
+        .login-form{
+          @include flexCenter(column, center, center);
+          .login-form-btn{
+            margin-top: 1em;
+          }
+          .login{
+            @include simple-btn;
+            @include merienda-f;
+            margin:1em 0em;
+          }
+          button{
+            @include shaded-btn;
+            @include merienda-f;
+            cursor: pointer;
+          }
+        }
+      }
+      
+    }
+
+    //* registration section styles
+    .registration-section{
+      margin: 3em 0em;
+      @include merienda-f;
+      .registration-page{
+        .registration-form{
+          @include flexCenter(column, center, center);
+
+          .registration{
+            @include simple-btn;
+            @include merienda-f;
+            margin:1em 0em;
+
+          }
+          button{
+            margin-top: 1em;
+            @include shaded-btn;
+            @include merienda-f;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    //* profile-section styles
+    .my-profile{
+      @include flexCenter(column,center,center);
+        @include cinzel-f;
+      width: 100%;
+      margin: 3em 0em;
+
+      .profile-books{
+        background-color: aliceblue;
+        margin: 20px 0px;
+        width: 100%;
+        h3{
+          text-align: center;
+        }
+
+        .pro-booklist{
+          @include flexCenter(row,center,center);
+
+          article{
+            margin: 10px;
+            background-color:$light-color;
+            border-radius: 8px;
+            padding: 10px;
+            .cover-img{
+              display: flex;
+              justify-content: center;
+            }
+          }
+
+        }
+      }
+
+      .add-new-btn{
+        @include shaded-btn;
+        cursor: pointer;
+        @include merienda-f;
+      }
+
+    }
+
+    //* adding books section styles
+    .add-books{
+      width: 100%;
+      // margin: 30px 0px;
+      @include merienda-f;
+      font-size: 1rem;
+      margin: 3em 0em;
+      .add-book-wrap{
+        @include flexCenter(column,center,center);
+
+        .add-book-form{
+          @include flexCenter(column,center,flex-start);
+          border: 2px solid black;
+          padding: 2em;
+
+           input:not(.cover-input){
+            @include simple-btn;
+            @include merienda-f;
+          }
+          select{
+            @include merienda-f;
+            padding: 8px;
+            margin-right: 8px;
+            font-size: 1rem;
+            border-radius: 10px;
+            border:none;
+            background-color: hsl(60, 6%, 94%);
+          }
+
+          .title,.author-name{
+            margin: 1em 0em 0em 0em;
+
+          }
+          .radio{
+            @include flexCenter(row,flex-start,center);
+            margin: 1em 0em;
+
+            .btn-wrap{
+              margin: 0em 1em 0em 0em;
+            }
+          }
+
+          .genre-boxes{
+            @include flexCenter(row,flex-start,center);
+            margin:1em 0em;
+
+            .checkbox-wrap{
+              margin:1em 1em 1em 0em;
+            }
+          }
+
+          .date-length{
+            margin:1em 0em;
+
+            .release-date{
+              margin-right: 1em;
+            }
+          }
+
+          .star-ratings{
+            margin:1em 0em;
+          }
+
+          .cover-img-upload{
+            margin:1em 0em;
+          }
+
+          .add-book-btn{
+            margin-top:1em;
+            align-self: center;
+            @include shaded-btn;
+            @include merienda-f;
+            cursor: pointer;
+          }
+
+        }
+      }
+
+    }
+
+
+    .welcome-section{
+      width: 100%;
+      text-align: center;
+      @include merienda-f;
+    }
+
+    //* main page library styles
+    .book-library{
+      @include poiret-f;
+      width:100%;
+      h2{
+        text-align: center;
+        @include merienda-f;
+      }
+      .book-gallery{
+        width: 100%;
+        @include flexCenter(row, flex-start, flex-start);
+        flex-wrap: wrap;
+
+        article{
+          background-color: bisque;
+          // max-width: 450px;
+          // max-height: 800px;
+          margin: 30px 15px;
+          padding: 30px;
+          border-radius: 12px;
+          // flex:1 200px;
+          .book-summary,.book-type,.book-owner{
+            max-width: 300px;
+            max-height: 350px ;
+          }
+          .book-genres{
+            max-width: 300px;
+            overflow-wrap: break-word;
+            // word-wrap: break-word;
+            // hyphens: auto;
+          }
+        }
+        
+      }
+    
+    
+    
+    
+    }
+    .hidden{
+      display:none;
+    }
+  }
+
+  footer{
+    @include merienda-f;
+    .footer-info{
+      text-align: center;
+      padding: 10px;
+      color: $light-color;
+      background-color: $red-brownish;
+    }
+  }
+
+}

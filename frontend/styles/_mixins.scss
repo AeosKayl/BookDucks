@@ -1,0 +1,75 @@
+//* fonts
+
+@mixin cardo-f{
+  font-family: 'Cardo', serif;
+}
+
+@mixin merienda-f{
+  font-family: 'Merienda', cursive;
+}
+
+@mixin poiret-f{
+  font-family: 'Poiret One', cursive;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+@mixin cinzel-f{
+  font-family: 'Cinzel', serif;
+}
+
+@mixin jost-f{
+  font-family: 'Jost', sans-serif;
+}
+
+//* mixins
+
+@mixin flexCenter ($dir,$cont,$align){
+  display: flex;
+  flex-direction: $dir; //column
+  justify-content: $cont;//center
+  align-items: $align;//center
+}
+
+@mixin columnFlex{
+  display: flex;
+  flex-direction: column;
+
+}
+
+@mixin btn-style{
+  border-radius: 10px;
+  border:none;
+  background-color: hsl(60, 6%, 94%);
+  box-shadow: #3f3e3e 5px 5px 5px;
+}
+
+@mixin shaded-btn{
+  width:150px;
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border:none;
+  background-color: hsl(60, 6%, 94%);
+  box-shadow: #3f3e3e 5px 5px 5px;
+}
+
+@mixin simple-btn{
+  padding: 8px;
+  margin-right: 8px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border:none;
+  background-color: hsl(60, 6%, 94%);
+  &:hover{
+    //  background-color: hsl(191, 97%, 51%);
+     background-color: hsl(191, 100%, 67%);
+     }
+}
+
+
+//* variables
+$red-brownish: hsl(0, 38%, 13%);
+$light-color: blanchedalmond;
+$highlight: aliceblue;
+$hover-color: hsl(191, 100%, 67%);

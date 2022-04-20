@@ -1,0 +1,525 @@
+.hidden {
+  display: none;
+}
+
+body header {
+  width: 100%;
+  background-color: #2e1515;
+  color: blanchedalmond;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body header button {
+  padding: 8px;
+  margin-right: 8px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #f1f1ef;
+  font-family: 'Merienda', cursive;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+body header button:hover {
+  background-color: #57e0ff;
+}
+
+body header .header-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-left: 20px;
+}
+
+body header .header-wrap h1, body header .header-wrap h2 {
+  font-family: 'Merienda', cursive;
+}
+
+body header .logo-cont {
+  -ms-flex-item-align: center;
+      align-self: center;
+  max-width: 300px;
+  max-height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body header .logo-cont img {
+  width: 100px;
+  height: 100px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  border: 2px solid gold;
+  border-radius: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body header .login-btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .login-btn-wrap .logged-user {
+  padding: 10px;
+  font-size: 1rem;
+  font-family: 'Merienda', cursive;
+}
+
+body header .login-btn-wrap .highlight {
+  font-size: 1.5rem;
+  margin-right: 0.5em;
+  color: #57e0ff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+body header .login-btn-wrap .login-btn {
+  padding: 8px;
+  margin-right: 8px;
+  margin: 1em;
+  font-size: 1rem;
+}
+
+body header .login-btn-wrap .login-btn:active {
+  background: #fcf531;
+}
+
+body main .login-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Merienda', cursive;
+  margin: 3em 0em;
+}
+
+body main .login-section .login-page .login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .login-section .login-page .login-form .login-form-btn {
+  margin-top: 1em;
+}
+
+body main .login-section .login-page .login-form .login {
+  padding: 8px;
+  margin-right: 8px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #f1f1ef;
+  font-family: 'Merienda', cursive;
+  margin: 1em 0em;
+}
+
+body main .login-section .login-page .login-form .login:hover {
+  background-color: #57e0ff;
+}
+
+body main .login-section .login-page .login-form button {
+  width: 150px;
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #f1f1ef;
+  -webkit-box-shadow: #3f3e3e 5px 5px 5px;
+          box-shadow: #3f3e3e 5px 5px 5px;
+  font-family: 'Merienda', cursive;
+  cursor: pointer;
+}
+
+body main .registration-section {
+  margin: 3em 0em;
+  font-family: 'Merienda', cursive;
+}
+
+body main .registration-section .registration-page .registration-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .registration-section .registration-page .registration-form .registration {
+  padding: 8px;
+  margin-right: 8px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #f1f1ef;
+  font-family: 'Merienda', cursive;
+  margin: 1em 0em;
+}
+
+body main .registration-section .registration-page .registration-form .registration:hover {
+  background-color: #57e0ff;
+}
+
+body main .registration-section .registration-page .registration-form button {
+  margin-top: 1em;
+  width: 150px;
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #f1f1ef;
+  -webkit-box-shadow: #3f3e3e 5px 5px 5px;
+          box-shadow: #3f3e3e 5px 5px 5px;
+  font-family: 'Merienda', cursive;
+  cursor: pointer;
+}
+
+body main .my-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Cinzel', serif;
+  width: 100%;
+  margin: 3em 0em;
+}
+
+body main .my-profile .profile-books {
+  background-color: aliceblue;
+  margin: 20px 0px;
+  width: 100%;
+}
+
+body main .my-profile .profile-books h3 {
+  text-align: center;
+}
+
+body main .my-profile .profile-books .pro-booklist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .my-profile .profile-books .pro-booklist article {
+  margin: 10px;
+  background-color: blanchedalmond;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+body main .my-profile .profile-books .pro-booklist article .cover-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .my-profile .add-new-btn {
+  width: 150px;
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #f1f1ef;
+  -webkit-box-shadow: #3f3e3e 5px 5px 5px;
+          box-shadow: #3f3e3e 5px 5px 5px;
+  cursor: pointer;
+  font-family: 'Merienda', cursive;
+}
+
+body main .add-books {
+  width: 100%;
+  font-family: 'Merienda', cursive;
+  font-size: 1rem;
+  margin: 3em 0em;
+}
+
+body main .add-books .add-book-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .add-books .add-book-wrap .add-book-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border: 2px solid black;
+  padding: 2em;
+}
+
+body main .add-books .add-book-wrap .add-book-form input:not(.cover-input) {
+  padding: 8px;
+  margin-right: 8px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #f1f1ef;
+  font-family: 'Merienda', cursive;
+}
+
+body main .add-books .add-book-wrap .add-book-form input:not(.cover-input):hover {
+  background-color: #57e0ff;
+}
+
+body main .add-books .add-book-wrap .add-book-form select {
+  font-family: 'Merienda', cursive;
+  padding: 8px;
+  margin-right: 8px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #f1f1ef;
+}
+
+body main .add-books .add-book-wrap .add-book-form .title, body main .add-books .add-book-wrap .add-book-form .author-name {
+  margin: 1em 0em 0em 0em;
+}
+
+body main .add-books .add-book-wrap .add-book-form .radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1em 0em;
+}
+
+body main .add-books .add-book-wrap .add-book-form .radio .btn-wrap {
+  margin: 0em 1em 0em 0em;
+}
+
+body main .add-books .add-book-wrap .add-book-form .genre-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1em 0em;
+}
+
+body main .add-books .add-book-wrap .add-book-form .genre-boxes .checkbox-wrap {
+  margin: 1em 1em 1em 0em;
+}
+
+body main .add-books .add-book-wrap .add-book-form .date-length {
+  margin: 1em 0em;
+}
+
+body main .add-books .add-book-wrap .add-book-form .date-length .release-date {
+  margin-right: 1em;
+}
+
+body main .add-books .add-book-wrap .add-book-form .star-ratings {
+  margin: 1em 0em;
+}
+
+body main .add-books .add-book-wrap .add-book-form .cover-img-upload {
+  margin: 1em 0em;
+}
+
+body main .add-books .add-book-wrap .add-book-form .add-book-btn {
+  margin-top: 1em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 150px;
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #f1f1ef;
+  -webkit-box-shadow: #3f3e3e 5px 5px 5px;
+          box-shadow: #3f3e3e 5px 5px 5px;
+  font-family: 'Merienda', cursive;
+  cursor: pointer;
+}
+
+body main .welcome-section {
+  width: 100%;
+  text-align: center;
+  font-family: 'Merienda', cursive;
+}
+
+body main .book-library {
+  font-family: 'Poiret One', cursive;
+  letter-spacing: 3px;
+  font-weight: bold;
+  width: 100%;
+}
+
+body main .book-library h2 {
+  text-align: center;
+  font-family: 'Merienda', cursive;
+}
+
+body main .book-library .book-gallery {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main .book-library .book-gallery article {
+  background-color: bisque;
+  margin: 30px 15px;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+body main .book-library .book-gallery article .book-summary, body main .book-library .book-gallery article .book-type, body main .book-library .book-gallery article .book-owner {
+  max-width: 300px;
+  max-height: 350px;
+}
+
+body main .book-library .book-gallery article .book-genres {
+  max-width: 300px;
+  overflow-wrap: break-word;
+}
+
+body main .hidden {
+  display: none;
+}
+
+body footer {
+  font-family: 'Merienda', cursive;
+}
+
+body footer .footer-info {
+  text-align: center;
+  padding: 10px;
+  color: blanchedalmond;
+  background-color: #2e1515;
+}
+/*# sourceMappingURL=style.css.map */

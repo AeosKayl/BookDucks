@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "books",
+  "info": {
+    "singularName": "book",
+    "pluralName": "books",
+    "displayName": "book",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    "author": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "releaseDate": {
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    "length": {
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "rating": {
+      "type": "integer",
+      "max": 10,
+      "min": 1
+    },
+    "genres": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::genre.genre",
+      "inversedBy": "books"
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}
